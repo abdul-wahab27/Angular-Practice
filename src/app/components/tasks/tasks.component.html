@@ -1,0 +1,10 @@
+<div class="container">
+
+  <h1 class="my-5">Add Tasks</h1>
+
+  <Label >Task Name</Label>
+  <input type="text" [(ngModel)]="tasks">
+
+  <button class="btn btn-primary" (click)="addTasks(task)">Add Tasks</button>
+  <h3 *ngFor="let task of tasks">{{task}}</h3>
+</div>
