@@ -26,7 +26,12 @@ export class PostsComponent implements OnInit {
   getPosts(){
     this._userService.getPosts()
     .subscribe(post => {
-      this.posts =post
+      this.posts = post.splice(0,10)
     })
+  }
+
+  deletePost(i:any){
+    this.posts.splice(i,1)
+    console.log(this.posts[i])
   }
 }
